@@ -484,6 +484,7 @@ class guiInput:
     self.adventuringGearHints = None
     self.castawayHints = None
     self.foolishHints = None
+    self.maxRequiredCastaways = None
   
   def getSeed(self, seed):
     self.seed = int(seed)
@@ -499,7 +500,7 @@ class guiInput:
     self.shuffleCrew = crew
     self.shuffleSkills = skills
   
-  def getProgressionMods(self, jewels,fish,disc,map,food,dogiRewards,mkRewards,silvia,maphorash):
+  def getProgressionMods(self, jewels,fish,disc,map,food,dogiRewards,mkRewards,silvia,maphorash, requiredCastaway):
     self.jewelTrades = jewels
     self.fishTrades = fish
     self.discoveries = disc
@@ -509,6 +510,7 @@ class guiInput:
     self.mkRewards = mkRewards
     self.silvia = silvia
     self.maphorash = maphorash
+    self.maxRequiredCastaways = requiredCastaway
 
   def getOtherToggles(self, intRewards,battleLogic,superWeapons,openPaths,extraFlameStones,extraIngredients, northSideOpen):
     self.intRewards = intRewards

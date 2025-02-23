@@ -67,6 +67,15 @@ These are settings that modify how much players may need to do of certain activi
 
 **Former Sanctuary Crypt**: Sets whether Former Sanctuary Crypt is added to the item pool. If turned off the dungeon is closed. All essence key stones are placed within the dungeon unless Essence Key Sanity is on.
 
+**Maximum Required Castaways**: Sets the maximum number of castaways needed to unlock all progression items, placing junk behind the checks that is higher than the selected  castaway requirement. This setting will override selected checks if applicable e.g. setting a number lower than 24 will disable the Maphorash check. Below lists the checks locked by the available selections.
+
+- 18 Castaways - Minimum requirement
+- 20 Castaways - 80% Map Completion, White Sand Cape Cobalt Crag blockade
+- 21 Castaways - Vista Ridge Upper
+- 22 Castaways - Submerged Cemetery, Bolado Monastery Basement 
+- 23 Castaways - Archeozoic Chasm - Cliffs Overlooking Crater blockade
+- 24 Castaways - 90% Map Completion, Silent Tower, Maphorash
+
 ### Pacing Modifiers:
 These are settings that help with the pacing of the rando. Like most randos Seiren Shuffle is designed to be complete-able in a single sitting, these settings are meant to help with that.   
 

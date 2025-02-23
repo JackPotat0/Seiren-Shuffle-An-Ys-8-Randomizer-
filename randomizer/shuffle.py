@@ -346,6 +346,20 @@ def progressionBans(parameters):
 
     locationBans = addLocations(locationsToAdd,locationBans)
 
+
+    if parameters.maxRequiredCastaways == "18":
+        locationsToAdd = [459,262,263,264,265,266,267,532,533,617,268,250,394,395,274,275,276,126,127,425,458,54]
+    elif parameters.maxRequiredCastaways == "20":
+        locationsToAdd = [459,262,263,264,265,266,267,532,533,617,268,250,394,395,274,275,276,126,127,425]
+    elif parameters.maxRequiredCastaways == "21":
+        locationsToAdd = [459,262,263,264,265,266,267,532,533,617,268,250,394,395,274,275,276]
+    elif parameters.maxRequiredCastaways == "22":
+        locationsToAdd = [459,262,263,264,265,266,267,532,533,617,268,250]
+    elif parameters.maxRequiredCastaways == "23":
+        locationsToAdd = [459,262,263,264,265,266,267,532,533,617,268]
+
+    locationBans = addLocations(locationsToAdd,locationBans)
+
     return locationBans
 
 def addLocations(locationsToAdd,locationBans):

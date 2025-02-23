@@ -31,6 +31,7 @@ def generateSpoiler(shuffledLocations,parameters,blacklistRegion,duplicateChests
     spoilerLog.write("Silvia: " + str(parameters.silvia) + "\n")
     spoilerLog.write("Mephorash: " + str(parameters.maphorash) + "\n")
     spoilerLog.write("Former Sanctuary Crypt: " + str(parameters.formerSanctuaryCrypt) + "\n")
+    spoilerLog.write("Maximum Required Castaways: " + parameters.maxRequiredCastaways + "\n")
     spoilerLog.write("Additional Intercept Rewards: " + str(parameters.intRewards) + "\n")
     spoilerLog.write("Skills w/ Boss Bonuses: " + str(parameters.shuffleSkills) + "\n")
     spoilerLog.write("Experience Multiplier: " + str(parameters.expMult) + "\n")

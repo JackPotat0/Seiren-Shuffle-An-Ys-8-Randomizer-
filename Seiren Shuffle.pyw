@@ -251,7 +251,15 @@ class ShuffleLocationsFrame(ctk.CTkFrame):
         # Former Sanctuary Crypt Checkbox
         self.former_sanctuary_crypt_var = ctk.BooleanVar(value=False)  # Default to False (unchecked)
         self.former_sanctuary_crypt_checkbox = ctk.CTkCheckBox(self, text="Former Sanctuary Crypt", variable=self.former_sanctuary_crypt_var)
-        self.former_sanctuary_crypt_checkbox.grid(row=3, column=1, padx=5, pady=5, sticky="w")
+        self.former_sanctuary_crypt_checkbox.grid(row=3, column=0, padx=5, pady=5, sticky="w")
+
+        # Required Castaway dropdown
+        self.max_castaway_label = ctk.CTkLabel(self, text="Max Required Castaways: ")
+        self.max_castaway_label.grid(row=4, column=0, padx=5, pady=5, sticky="w")
+        
+        self.max_castaway_option_menu = ctk.CTkOptionMenu(self, values=["18", "20", "21", "22", "23", "24"])
+        self.max_castaway_option_menu.set("24")
+        self.max_castaway_option_menu.grid(row=4, column=1, padx=5, pady=5, sticky="ew")
 
 class ProgressionPlacementModifiersFrame(ctk.CTkFrame):
     def __init__(self, master):
@@ -653,7 +661,8 @@ class App(ctk.CTk):
                 "silvia": self.shuffleLocationsFrame.silvia_var.get(),
                 "mephorash": self.shuffleLocationsFrame.mephorash_var.get(),
                 "formerSanctuaryCrypt": self.shuffleLocationsFrame.former_sanctuary_crypt_var.get(),
-                
+                "maxRequiredCastaways": self.shuffleLocationsFrame.max_castaway_option_menu.get(),
+
                 # Progression Placement Modifiers
                 "jewelTradeItems": self.progressionPlacementModifiersFrame.jewel_trade_option_menu.get(),
                 "fishTrades": self.progressionPlacementModifiersFrame.fish_trade_option_menu.get(),
@@ -733,6 +742,7 @@ class App(ctk.CTk):
             self.shuffleLocationsFrame.silvia_var.set(settings.get("silvia", True))
             self.shuffleLocationsFrame.mephorash_var.set(settings.get("mephorash", True))
             self.shuffleLocationsFrame.former_sanctuary_crypt_var.set(settings.get("formerSanctuaryCrypt", False))
+            self.shuffleLocationsFrame.max_castaway_option_menu.set(settings.get("maxRequiredCastaways", "24"))
 
             # Progression Placement Modifiers
             self.progressionPlacementModifiersFrame.jewel_trade_option_menu.set(
@@ -1014,7 +1024,8 @@ class App(ctk.CTk):
                 self.shuffleLocationsFrame.dogi_intercept_var.get(),
                 self.shuffleLocationsFrame.mk_rewards_var.get(),
                 self.shuffleLocationsFrame.silvia_var.get(),
-                self.shuffleLocationsFrame.mephorash_var.get()
+                self.shuffleLocationsFrame.mephorash_var.get(),
+                self.shuffleLocationsFrame.max_castaway_option_menu.get()
             )
             
             # Other Toggles
